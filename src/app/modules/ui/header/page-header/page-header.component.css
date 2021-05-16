@@ -1,0 +1,13 @@
+.content{
+    width: auto;
+    display: grid;
+    align-content: center;
+    background-color: deepskyblue;
+    color: white;
+    height: 3em;
+}
+
+.logo{
+    padding-left: 1%;
+    font-family: Arial, Helvetica, sans-serif
+}

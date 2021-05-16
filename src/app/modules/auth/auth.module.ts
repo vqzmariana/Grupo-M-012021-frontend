@@ -6,6 +6,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { AuthService } from "./auth.service";
 import { SignupPageComponent } from "./signup/signup-page.component";
 import { LoginPageComponent } from "./login/login-page.component";
+import { UiModule } from "../ui/ui.module";
 
 
 
@@ -25,7 +26,7 @@ export const authRoutes: Routes = [
     declarations: [LoginPageComponent, SignupPageComponent],
     entryComponents: [],
     exports: [LoginPageComponent, SignupPageComponent],
-    imports: [RouterModule.forChild(authRoutes), HttpClientModule, CommonModule, FormsModule, ReactiveFormsModule],
+    imports: [RouterModule.forChild(authRoutes), HttpClientModule, CommonModule, FormsModule, ReactiveFormsModule, UiModule],
     providers: [AuthService]
   })
   export class AuthModule {}
