@@ -7,7 +7,7 @@ import { AuthService } from "./auth.service";
 import { SignupPageComponent } from "./signup/signup-page.component";
 import { LoginPageComponent } from "./login/login-page.component";
 import { UiModule } from "../ui/ui.module";
-
+import { MatCardModule } from '@angular/material/card';
 
 
 export const authRoutes: Routes = [
@@ -26,7 +26,7 @@ export const authRoutes: Routes = [
     declarations: [LoginPageComponent, SignupPageComponent],
     entryComponents: [],
     exports: [LoginPageComponent, SignupPageComponent],
-    imports: [RouterModule.forChild(authRoutes), HttpClientModule, CommonModule, FormsModule, ReactiveFormsModule, UiModule],
+    imports: [RouterModule.forChild(authRoutes), HttpClientModule, CommonModule, FormsModule, ReactiveFormsModule, UiModule, MatCardModule],
     providers: [AuthService]
   })
   export class AuthModule {}

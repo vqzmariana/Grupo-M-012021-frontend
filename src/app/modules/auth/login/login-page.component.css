@@ -1,0 +1,16 @@
+.login-page{
+    height: 100%;
+    
+}
+.login-container{
+    width: 25%;
+    height: 25%;
+    margin: auto;
+    box-shadow: 0px 0px 11px -4px rgb(0 0 0 / 75%);
+}
+.page-content{
+    display:grid;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+}

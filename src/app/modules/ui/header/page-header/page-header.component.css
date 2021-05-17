@@ -1,10 +1,10 @@
 .content{
     width: auto;
-    display: grid;
+    display: flex;
     align-content: center;
     background-color: deepskyblue;
     color: white;
-    height: 3em;
+    height: auto;
 }
 
 .logo{

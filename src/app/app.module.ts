@@ -20,6 +20,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    
     NoopAnimationsModule
   ],
   declarations:[
