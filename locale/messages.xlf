@@ -2,11 +2,55 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="7721945668860723596" datatype="html">
-        <source> hi </source>
+      <trans-unit id="8520023152129279437" datatype="html">
+        <source>Log In</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/auth/login/login-page.component.html</context>
-          <context context-type="linenumber">2,3</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7704307682026645950" datatype="html">
+        <source> The username and password were not recognized </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/auth/login/login-page.component.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4768749765465246664" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/auth/login/login-page.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Login Email</note>
+      </trans-unit>
+      <trans-unit id="1689226013316043367" datatype="html">
+        <source> Please provide a valid email address </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/auth/login/login-page.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1431416938026210429" datatype="html">
+        <source>Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/auth/login/login-page.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description">Login Password</note>
+      </trans-unit>
+      <trans-unit id="291274129102815169" datatype="html">
+        <source> Please provide a valid password </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/auth/login/login-page.component.html</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2454050363478003966" datatype="html">
+        <source>Login</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/auth/login/login-page.component.html</context>
+          <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
     </body>
