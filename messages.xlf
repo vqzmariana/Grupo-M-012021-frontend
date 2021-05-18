@@ -22,6 +22,10 @@
           <context context-type="sourcefile">src/app/modules/auth/login/login-page.component.html</context>
           <context context-type="linenumber">12</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/auth/signup/signup-page.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
         <note priority="1" from="description">Login Email</note>
       </trans-unit>
       <trans-unit id="1689226013316043367" datatype="html">
@@ -30,12 +34,20 @@
           <context context-type="sourcefile">src/app/modules/auth/login/login-page.component.html</context>
           <context context-type="linenumber">14,15</context>
         </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/auth/signup/signup-page.component.html</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
       </trans-unit>
       <trans-unit id="1431416938026210429" datatype="html">
         <source>Password</source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/auth/login/login-page.component.html</context>
           <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/auth/signup/signup-page.component.html</context>
+          <context context-type="linenumber">24</context>
         </context-group>
         <note priority="1" from="description">Login Password</note>
       </trans-unit>
@@ -44,6 +56,10 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/auth/login/login-page.component.html</context>
           <context context-type="linenumber">20,21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/auth/signup/signup-page.component.html</context>
+          <context context-type="linenumber">26,27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2454050363478003966" datatype="html">
@@ -58,6 +74,53 @@
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/modules/auth/login/login-page.component.html</context>
           <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1466012768716286509" datatype="html">
+        <source>Sign Up</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/auth/signup/signup-page.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/auth/signup/signup-page.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="23640097417909659" datatype="html">
+        <source> The email already exists </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/auth/signup/signup-page.component.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8953033926734869941" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/auth/signup/signup-page.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Name</note>
+      </trans-unit>
+      <trans-unit id="1096847369569190660" datatype="html">
+        <source> Please provide a valid name </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/auth/signup/signup-page.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7613502436097043017" datatype="html">
+        <source> The password must be at least 6 characters </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/auth/signup/signup-page.component.html</context>
+          <context context-type="linenumber">29,30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3461230574295546047" datatype="html">
+        <source>I already have an account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/modules/auth/signup/signup-page.component.html</context>
+          <context context-type="linenumber">36</context>
         </context-group>
       </trans-unit>
     </body>
