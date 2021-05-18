@@ -20,7 +20,12 @@
                     Please provide a valid password
                   </mat-error>
                 </mat-form-field>
-                <button mat-raised-button color="primary" class="login-button" i18n>Login</button>
+                <div class="submit-button">
+                  <button mat-raised-button color="primary" class="login-button" i18n>Login</button>
+                </div>
+                <div class="no-account">
+                  <label class="no-account-button" (click)="goToSignup()" i18n>I don't have an account</label>
+                </div>
               </form>
             </mat-card-content>
         </mat-card>

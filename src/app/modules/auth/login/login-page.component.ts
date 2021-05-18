@@ -47,4 +47,8 @@ export class LoginPageComponent{
         this.formSubmitAttempt = true;
       }
     }
+
+    goToSignup(){
+      this.router.navigate(["auth/signup"])
+    }
 }
