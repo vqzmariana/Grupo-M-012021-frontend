@@ -1,0 +1,40 @@
+.signup-page{
+    height: 100%;
+    
+}
+
+.signup-container{
+    box-shadow: 0px 0px 11px -4px rgb(0 0 0 / 75%);
+}
+
+.page-content{
+    display: flex;
+    height: 90%;
+    width: 100%;
+    align-content: center;
+}
+
+mat-card {
+    max-width: 400px;
+    margin: 4em auto;
+    text-align: center;
+    height: 22em;
+    width: 20em;
+}
+
+mat-form-field {
+    display: block;
+}
+
+.signup-button{
+    background-color: deepskyblue;
+    margin-top: 10px;
+}
+
+.no-account{
+    margin-top: 20px;
+}
+
+.no-account-button:hover{
+    cursor: pointer;
+}

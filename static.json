@@ -1,0 +1,14 @@
+{
+  "root": "/dist",
+  "clean_urls": true,
+  "proxies": {
+    "/api/": {
+      "origin": "https://grupo-m-desapp.herokuapp.com/"
+    }
+  },
+    "headers": {
+    "/**": {
+      "Access-Control-Allow-Origin": "*"
+    }
+  }
+}

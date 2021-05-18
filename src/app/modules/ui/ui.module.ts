@@ -1,9 +1,12 @@
+import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { PageHeaderComponent } from "./page-header/page-header.component";
 
 @NgModule({
     declarations: [PageHeaderComponent],
-    entryComponents: [],
+    imports: [
+        CommonModule,
+    ],
     exports: [PageHeaderComponent],
 })
 export class UiModule {}

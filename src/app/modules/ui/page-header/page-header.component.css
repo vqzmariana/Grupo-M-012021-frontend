@@ -13,3 +13,13 @@
     font-family: Arial, Helvetica, sans-serif;
     height: 20px;
 }
+
+.change-lenguaje{
+    right: 0;
+    position: fixed;
+    margin-right: 10px;
+}
+
+a{
+    padding-right: 10px;
+}

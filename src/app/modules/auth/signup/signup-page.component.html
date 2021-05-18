@@ -1,0 +1,42 @@
+<div class="signup-page">
+    <page-header></page-header>
+    <div class="page-content">
+        <mat-card class="signup-container">
+            <mat-card-content>
+              <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <h2 i18n>Sign Up</h2>
+                <mat-error *ngIf="signupInvalid" i18n>
+                  The email already exists
+                </mat-error>
+                <mat-form-field class="full-width-input">
+                    <input matInput type="name" placeholder="Name" i18n-placeholder="Name" formControlName="name" required >
+                    <mat-error i18n>
+                      Please provide a valid name
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width-input">
+                  <input matInput placeholder="Email" i18n-placeholder="Login Email" formControlName="username" required>
+                  <mat-error i18n>
+                    Please provide a valid email address
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field class="full-width-input">
+                    <input matInput type="password" placeholder="Password" i18n-placeholder="Login Password" formControlName="password" required >
+                    <mat-error *ngIf="password.hasError('required')" i18n>
+                        Please provide a valid password
+                    </mat-error>
+                    <mat-error *ngIf="password.hasError('minlength')" i18n>
+                        The password must be at least 6 characters
+                    </mat-error>
+                </mat-form-field>
+                <div class="submit-button">
+                  <button mat-raised-button color="primary" class="signup-button" i18n>Sign Up</button>
+                </div>
+                <div class="no-account">
+                  <label class="no-account-button" (click)="goToLogin()" i18n>I already have an account</label>
+                </div>
+              </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>
