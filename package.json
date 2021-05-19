@@ -4,13 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "build:i18n": "npm run build -- --output-path=dist/angular/${LANG:-en} --bh /${LANG:-en}/ --i18n-file=locale/messages.${LANG:-en}.xlf --locale=${LANG:-en}",
-    "heroku-postbuild": "for lang in en es; do LANG=$lang npm run build:i18n & done; wait;",
     "esp": "ng serve -o --configuration=es",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"  
+    "e2e": "ng e2e",
+    "heroku-postbuild": "ng build --prod --localize"
   },
   "private": true,
   "dependencies": {
