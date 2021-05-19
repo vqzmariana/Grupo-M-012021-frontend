@@ -5,12 +5,13 @@
     "ng": "ng",
     "start": "node server.js",
     "esp": "ng serve -o --configuration=es",
+    "build-i18n:es": "ng build --output-path=dist/angular/es --aot --prod --base-href /es/ --i18n-file=src/locale/messages.es.xlf --i18n-format=xlf --i18n-locale=es",
+    "build-i18n:en": "ng build --output-path=dist/angular/en --aot --prod --base-href /en/ --i18n-file=src/locale/messages.xlf --i18n-format=xlf --i18n-locale=en",
+    "heroku-postbuild": "npm run build-i18n:en && npm run build-i18n:es ",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "heroku-postbuild": "ng build --prod --localize"
-  },
+    "e2e": "ng e2e"  },
   "private": true,
   "dependencies": {
     "@angular-devkit/build-angular": "^0.1102.13",
