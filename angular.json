@@ -10,9 +10,9 @@
       "sourceRoot": "src",
       "prefix": "app",
       "i18n": {
-        "sourceLocale": "en",
+        "sourceLocale": "en-US",
         "locales": {
-          "es": {
+          "es-AR": {
             "translation": "src/locale/messages.es.xlf",
             "baseHref": ""
           }
@@ -39,8 +39,8 @@
             "scripts": []
           },
           "configurations": {
-            "es": {
-              "localize": ["es"]
+            "es-AR": {
+              "localize": ["es-AR"]
             },
             "production": {
               "fileReplacements": [
@@ -78,8 +78,8 @@
             "browserTarget": "angular:build"
           },
           "configurations": {
-            "es": {
-              "browserTarget": "angular:build:es"
+            "es-AR": {
+              "browserTarget": "angular:build:es-AR"
             },
             "production": {
               "browserTarget": "angular:build:production"
@@ -130,8 +130,8 @@
             "devServerTarget": "angular:serve"
           },
           "configurations": {
-            "es": {
-              "devServerTarget": "angular:serve:es"
+            "es-AR": {
+              "devServerTarget": "angular:serve:es-AR"
             },
             "production": {
               "devServerTarget": "angular:serve:production"

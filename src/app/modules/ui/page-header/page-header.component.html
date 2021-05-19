@@ -3,9 +3,11 @@
         Re-Seña!
     </h1>
     <div class="change-lenguaje">
+        <span>{{money | currency : localeCode}}</span>
+        <span>{{date | date : 'shortDate'}}</span>
         <span>Current: {{locale}}</span>
-        <a href="\en">English</a>
-        <a href="\es">Español</a>
+        <a href="\en-US">English</a>
+        <a href="\es-ES">Español</a>
     </div>
     
 </div>

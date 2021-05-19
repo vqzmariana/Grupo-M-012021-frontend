@@ -4,9 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "esp": "ng serve -o --configuration=es",
-    "build-i18n:es": "ng build --output-path=dist/angular/es --aot --prod --base-href /es/ --i18n-file=src/locale/messages.es.xlf --i18n-format=xlf --i18n-locale=es",
-    "build-i18n:en": "ng build --output-path=dist/angular/en --aot --prod --base-href /en/ --i18n-file=src/locale/messages.xlf --i18n-format=xlf --i18n-locale=en",
+    "esp": "ng serve -o --configuration=es-AR",
+    "build-i18n:es": "ng build --output-path=dist/angular/es-AR --aot --prod --base-href /es-AR/ --i18n-file=src/locale/messages.es.xlf --i18n-format=xlf --i18n-locale=es-AR",
+    "build-i18n:en": "ng build --output-path=dist/angular/en-US --aot --prod --base-href /en-US/ --i18n-file=src/locale/messages.xlf --i18n-format=xlf --i18n-locale=en-US",
     "heroku-postbuild": "npm run build-i18n:en && npm run build-i18n:es ",
     "build": "ng build",
     "test": "ng test",

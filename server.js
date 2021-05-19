@@ -2,7 +2,7 @@
 const express = require('express');
 const path = require('path');
 const locale = require('locale');
-const supportedLocales = ['en', 'es'];
+const supportedLocales = ['en-US', 'es-AR'];
 
 const app = express();
 
@@ -15,7 +15,7 @@ app.listen(process.env.PORT || 8180);
 
 app.get('/*', (req, res) => {
     const matches = req.url.match(/^\/([a-z]{2}(?:-[A-Z]{2})?)\//);
-    const locale = matches && supportedLocales.indexOf(matches[1]) !== -1 ? matches[1] : req.locale;
+    const locale = matches && supportedLocales.indexOf(matches[1]) !== -1 ? matches[1] : 'en-US';
     res.sendFile('index.html',{root:`dist/angular/${locale}/`});
 });
 
