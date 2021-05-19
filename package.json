@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "heroku-postbuild": "ng build --prod"
+    "heroku-postbuild": "ng build --prod --localize"
   },
   "private": true,
   "dependencies": {
@@ -28,6 +28,7 @@
     "@angular/platform-browser-dynamic": "~11.2.9",
     "@angular/router": "~11.2.9",
     "express": "^4.17.1",
+    "locale": "^0.1.0",
     "path": "^0.12.7",
     "rxjs": "~7.0.0",
     "tslib": "^2.0.0",

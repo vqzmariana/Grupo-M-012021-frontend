@@ -27,9 +27,7 @@ const routes: Routes = [
   declarations:[
     AppComponent
   ],
-  providers: [
-     { provide: LOCALE_ID, useValue: 'en-US' } 
-  ],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
