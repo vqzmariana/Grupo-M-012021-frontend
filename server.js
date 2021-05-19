@@ -2,7 +2,7 @@
 const express = require('express');
 const path = require('path');
 const locale = require('locale');
-const supportedLocales = ['en-US', 'es'];
+const supportedLocales = ['en', 'es'];
 
 const app = express();
 
