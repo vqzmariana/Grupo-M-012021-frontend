@@ -11,7 +11,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"  },
+    "e2e": "ng e2e"
+  },
   "private": true,
   "dependencies": {
     "@angular-devkit/build-angular": "^0.1102.13",
@@ -28,6 +29,8 @@
     "@angular/platform-browser": "~11.2.9",
     "@angular/platform-browser-dynamic": "~11.2.9",
     "@angular/router": "~11.2.9",
+    "@auth0/angular-jwt": "^5.0.2",
+    "@auth0/auth0-angular": "^1.5.0",
     "express": "^4.17.1",
     "locale": "^0.1.0",
     "path": "^0.12.7",

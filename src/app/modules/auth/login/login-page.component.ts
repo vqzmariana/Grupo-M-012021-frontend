@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
 import { AuthService } from "../auth.service";
+import { Client } from "../client";
 
 @Component({
     selector: 'app-login-page',
@@ -36,13 +37,17 @@ export class LoginPageComponent{
       this.loginInvalid = false;
       this.formSubmitAttempt = false;
       if (this.form.valid) {
-        try {
-          const username = this.form.get('username')?.value;
-          const password = this.form.get('password')?.value;
-          await this.authService.login(username, password);
-        } catch (err) {
-          this.loginInvalid = true;
-        }
+        const username = this.form.get('username')?.value;
+        const password = this.form.get('password')?.value;
+        this.authService.login(username, password).subscribe({
+          next: (data) => {
+            this.authService.saveData(data as Client)
+            this.router.navigate(['test/prueba'])
+          },
+          error: (error) => {
+            this.loginInvalid = true
+          }
+        })
       } else {
         this.formSubmitAttempt = true;
       }

@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
 import { AuthService } from "../auth.service";
+import { Client } from "../client";
 
 @Component({
     selector: 'app-signup-page',
@@ -41,14 +42,18 @@ export class SignupPageComponent{
       this.signupInvalid = false;
       this.formSubmitAttempt = false;
       if (this.form.valid) {
-        try {
-          const username = this.form.get('username')?.value;
-          const password = this.form.get('password')?.value;
-          const name = this.form.get('name')?.value;
-          await this.authService.signup(username, password, name);
-        } catch (err) {
-          this.signupInvalid = true;
-        }
+        const username = this.form.get('username')?.value;
+        const password = this.form.get('password')?.value;
+        const name = this.form.get('name')?.value;
+        this.authService.signup(username, password, name).subscribe({
+          next: (data) => {
+            this.authService.saveData(data as Client)
+            this.router.navigate(['test/prueba'])
+          },
+          error: (error) => {
+            this.signupInvalid = true
+          }
+        })
       } else {
         this.formSubmitAttempt = true;
       }

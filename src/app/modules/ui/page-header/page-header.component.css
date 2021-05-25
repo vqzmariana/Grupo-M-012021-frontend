@@ -16,7 +16,7 @@
 
 .change-lenguaje{
     right: 0;
-    position: fixed;
+    position: absolute;
     margin-right: 10px;
 }
 
