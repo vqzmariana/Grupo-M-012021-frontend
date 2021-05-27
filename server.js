@@ -19,3 +19,4 @@ app.get('/*', (req, res) => {
     res.sendFile('index.html',{root:`dist/angular/${locale}/`});
 });
 
+console.log("App Initialized")
