@@ -13,8 +13,7 @@
         "sourceLocale": "en-US",
         "locales": {
           "es-AR": {
-            "translation": "src/locale/messages.es.xlf",
-            "baseHref": ""
+            "translation": "src/locale/messages.es.xlf"
           }
         }
       },
