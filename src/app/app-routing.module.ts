@@ -17,7 +17,7 @@ const routes: Routes = [
       loadChildren: () =>
       import('./modules/test/test.module').then(m => m.TestModule)
     },
-    { path: '**', redirectTo: '/auth/login', pathMatch: 'full' },
+    { path: '**', redirectTo: '/test/prueba', pathMatch: 'full' },
 ];
 
 @NgModule({

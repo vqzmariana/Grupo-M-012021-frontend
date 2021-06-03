@@ -1,3 +1,4 @@
+import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { TestComponent } from "./test.component";
@@ -12,6 +13,6 @@ export const testRoutes: Routes = [
 
 @NgModule({
     declarations: [TestComponent],
-    imports: [RouterModule.forChild(testRoutes)],
+    imports: [RouterModule.forChild(testRoutes), HttpClientModule],
     exports: [TestComponent]
 }) export class TestModule {}

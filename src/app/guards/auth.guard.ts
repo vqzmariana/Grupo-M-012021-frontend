@@ -11,7 +11,7 @@ export class AuthGuard implements CanActivate {
     private jwtHelper: JwtHelperService) {}
 
   public canActivate(): boolean {
-    const token = this.authService.getUserToken().replace("Bearer ", "")
+    const token = this.authService.getUserToken()
     
     if (!token) {
         this.router.navigate(['/auth/login'])
@@ -27,6 +27,7 @@ export class AuthGuard implements CanActivate {
   }
 
   private isAuthenticated(token: string): boolean {
-    return !this.jwtHelper.isTokenExpired(token)
+    
+    return !this.jwtHelper.isTokenExpired(token.replace("Bearer ", ""))
   }
 }
