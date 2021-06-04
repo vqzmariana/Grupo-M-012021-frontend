@@ -35,7 +35,9 @@
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/crypto-js/crypto-js.js"
+            ]
           },
           "configurations": {
             "es-AR": {

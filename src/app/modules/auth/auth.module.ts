@@ -8,6 +8,7 @@ import { SignupPageComponent } from "./signup/signup-page.component";
 import { LoginPageComponent } from "./login/login-page.component";
 import { UiModule } from "../ui/ui.module";
 import { MaterialModule } from "../ui/material.module";
+import { EncrDecrService } from "./EncrDecr.service";
 
 
 export const authRoutes: Routes = [
@@ -27,6 +28,6 @@ export const authRoutes: Routes = [
     entryComponents: [],
     exports: [LoginPageComponent, SignupPageComponent],
     imports: [RouterModule.forChild(authRoutes), HttpClientModule, CommonModule, FormsModule, ReactiveFormsModule, UiModule, MaterialModule],
-    providers: [AuthService]
+    providers: [AuthService, EncrDecrService]
   })
   export class AuthModule {}

@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
 import { AuthService } from "../auth.service";
 import { Client } from "../client";
+import { EncrDecrService } from "../EncrDecr.service";
 
 @Component({
     selector: 'app-signup-page',
@@ -21,7 +22,8 @@ export class SignupPageComponent{
       private fb: FormBuilder,
       private route: ActivatedRoute,
       private router: Router,
-      private authService: AuthService
+      private authService: AuthService,
+      private EncrDecr: EncrDecrService
     ) {
   
       this.form = this.fb.group({
@@ -44,6 +46,7 @@ export class SignupPageComponent{
       if (this.form.valid) {
         const username = this.form.get('username')?.value;
         const password = this.form.get('password')?.value;
+        const encrypted = this.EncrDecr.set('secretKeyMuySecreta$#@$^@1ERF', password);
         const name = this.form.get('name')?.value;
         this.authService.signup(username, password, name).subscribe({
           next: (data) => {

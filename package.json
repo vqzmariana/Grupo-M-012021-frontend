@@ -31,6 +31,8 @@
     "@angular/router": "~11.2.9",
     "@auth0/angular-jwt": "^5.0.2",
     "@auth0/auth0-angular": "^1.5.0",
+    "@types/crypto-js": "^4.0.1",
+    "crypto-js": "^4.0.0",
     "express": "^4.17.1",
     "locale": "^0.1.0",
     "path": "^0.12.7",
