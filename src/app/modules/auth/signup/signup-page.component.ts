@@ -46,9 +46,10 @@ export class SignupPageComponent{
       if (this.form.valid) {
         const username = this.form.get('username')?.value;
         const password = this.form.get('password')?.value;
-        const encrypted = this.EncrDecr.set('secretKeyMuySecreta$#@$^@1ERF', password);
+        const encrypted = this.EncrDecr.set('secretKeyMuySecreta$#@$^@1ERF', password).split("+").join("");;
         const name = this.form.get('name')?.value;
-        this.authService.signup(username, password, name).subscribe({
+        console.log(encrypted)
+        this.authService.signup(username, encrypted, name).subscribe({
           next: (data) => {
             this.authService.saveData(data as Client)
             this.router.navigate(['test/prueba'])
