@@ -28,6 +28,7 @@ export class AuthService {
         localStorage.setItem('token', clientData.token)
         localStorage.setItem('apikey', clientData.apikey)
         localStorage.setItem('name', clientData.name)
+        localStorage.setItem('email', clientData.email)
     }
 
     public getUserToken(): string {

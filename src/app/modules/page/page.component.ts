@@ -3,13 +3,17 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: 'app-test',
-  templateUrl: './test.component.html',
-  styleUrls: ['./test.component.css']
+  selector: 'app-page',
+  templateUrl: './page.component.html',
+  styleUrls: ['./page.component.css']
 })
-export class TestComponent implements OnInit {
+export class PageComponent implements OnInit {
 
-  API_URL = environment.API_URL
+  private API_URL = environment.API_URL
+  apikey = localStorage.getItem("apikey")
+  name = localStorage.getItem("name")
+  email = localStorage.getItem("email")
+  hide = true
 
   constructor(private http: HttpClient) { }
 
@@ -18,12 +22,10 @@ export class TestComponent implements OnInit {
     const fullpath = this.API_URL + "client/test"
     this.http.get(fullpath, {headers: new HttpHeaders().set('Authorization', token), responseType: 'text'}).subscribe({
       next: data => {
-        console.log((data as any))
-        console.log("anda")
+        
       },
       error: error => {
-        console.log(error)
-        console.log("no anda")
+        
       }
     })
   }

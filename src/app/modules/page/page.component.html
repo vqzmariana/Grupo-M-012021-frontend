@@ -1,0 +1,39 @@
+<div class="page">
+    <page-header></page-header>
+    <mat-tab-group animationDuration="500ms" mat-align-tabs="start">
+        <mat-tab label="Profile"> 
+            <div class="profile-container">
+                <h1>Personal Data</h1>
+                  
+                <div class="personal-data-content">
+                    <div class="api-key">
+                        <h3>Api Key:</h3>
+                        <input matInput [type]="hide ? 'password' : 'text'" disabled value="{{apikey}}" class="apikey-input">
+                        <button mat-raised-button (click)="hide = !hide" class="hide-button">Hide</button>
+                    </div>
+                    <mat-divider></mat-divider>
+                    <div class="email">
+                        <h3>Email:</h3>
+                        <label class="email-label">{{email}}</label>
+                    </div>
+                    <mat-divider></mat-divider>
+                    <div class="name">
+                        <h3>Name:</h3>
+                        <label class="name-label">{{name}}</label>
+                    </div>
+                </div>
+            </div>
+        </mat-tab>
+        <mat-tab label="Metrics"> 
+            <div class="metrics-container">
+
+            </div> 
+        </mat-tab>
+        <mat-tab label="Subscribe"> 
+            <div class="subscribe-container">
+
+            </div>    
+        </mat-tab>
+    </mat-tab-group>
+      
+</div>

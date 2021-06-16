@@ -11,13 +11,13 @@ const routes: Routes = [
       import('./modules/auth/auth.module').then(m => m.AuthModule)
     },
     {
-      path: 'test',
+      path: 'page',
       pathMatch: 'prefix',
-      canActivate: [AuthGuard],
+      //canActivate: [AuthGuard],
       loadChildren: () =>
-      import('./modules/test/test.module').then(m => m.TestModule)
+      import('./modules/page/page.module').then(m => m.PageModule)
     },
-    { path: '**', redirectTo: '/test/prueba', pathMatch: 'full' },
+    { path: '**', redirectTo: '/page', pathMatch: 'full' },
 ];
 
 @NgModule({

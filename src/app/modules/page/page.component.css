@@ -1,0 +1,41 @@
+.mat-tab-group {
+    margin-bottom: 48px;
+}
+
+.profile-container, .metrics-container, .subscribe-container{
+    margin-top: 30px;
+    margin-left: 1em;
+}
+
+.personal-data-content{
+    padding-left: 20px;
+}
+
+.api-key, .email, .name{
+    display:flex;
+    align-items: center;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.apikey-input, .hide-button, .email-label, .name-label{
+    margin-left: 15px;
+}
+
+h3{
+    padding-top: 15px;
+}
+
+.apikey-input{
+    height: 25px;
+    font-size: 15px;
+}
+
+.hide-button{
+    background: deepskyblue;
+    color: white;
+}
+
+input:disabled{
+    color: black;
+}
