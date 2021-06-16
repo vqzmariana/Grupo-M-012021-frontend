@@ -18,7 +18,8 @@ mat-card {
     max-width: 400px;
     margin: 4em auto;
     text-align: center;
-    height: 18em;
+    height: fit-content;
+    max-height: 19em;
     width: 20em;
 }
 
@@ -32,7 +33,7 @@ mat-form-field {
 }
 
 .no-account{
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .no-account-button:hover{

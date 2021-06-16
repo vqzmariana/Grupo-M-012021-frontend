@@ -41,7 +41,6 @@ export class LoginPageComponent implements OnInit{
         const username = this.form.get('username')?.value;
         const password = this.form.get('password')?.value;
         const encrypted = this.EncrDecr.set('secretKeyMuySecreta$#@$^@1ERF', password).split("+").join("");
-        console.log(encrypted)
         this.authService.login(username, encrypted).subscribe({
           next: (data) => {
             this.authService.saveData(data as Client)
