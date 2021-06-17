@@ -2,22 +2,22 @@
     <page-header></page-header>
     <mat-tab-group animationDuration="500ms" mat-align-tabs="start">
         <mat-tab label="Profile"> 
-            <div class="profile-container">
+            <div class="container">
                 <h1>Personal Data</h1>
                   
-                <div class="personal-data-content">
-                    <div class="api-key">
+                <div class="content">
+                    <div class="data">
                         <h3>Api Key:</h3>
                         <input matInput [type]="hide ? 'password' : 'text'" disabled value="{{apikey}}" class="apikey-input">
                         <button mat-raised-button (click)="hide = !hide" class="hide-button">Hide</button>
                     </div>
                     <mat-divider></mat-divider>
-                    <div class="email">
+                    <div class="data">
                         <h3>Email:</h3>
                         <label class="email-label">{{email}}</label>
                     </div>
                     <mat-divider></mat-divider>
-                    <div class="name">
+                    <div class="data">
                         <h3>Name:</h3>
                         <label class="name-label">{{name}}</label>
                     </div>
@@ -25,12 +25,35 @@
             </div>
         </mat-tab>
         <mat-tab label="Metrics"> 
-            <div class="metrics-container">
+            <div class="container">
+                <h1>Metrics</h1>
 
+                <div class="content">
+                    <div class="data">
+                        <h3>Total Reviews:</h3>
+                        <label class="total">{{metrics.reviews}}</label>
+                    </div>
+                    <mat-divider></mat-divider>
+                    <div class="data">
+                        <h3>Total Likes:</h3>
+                        <label class="total">{{metrics.likes}}</label>
+                    </div>
+                    <mat-divider></mat-divider>
+                    <div class="data">
+                        <h3>Total Dislikes:</h3>
+                        <label class="total">{{metrics.dislikes}}</label>
+                    </div>
+                    <mat-divider></mat-divider>
+                    <div class="data">
+                        <h3>Total Reports:</h3>
+                        <label class="total">{{metrics.reports}}</label>
+                    </div>
+                </div>
+                
             </div> 
         </mat-tab>
         <mat-tab label="Subscribe"> 
-            <div class="subscribe-container">
+            <div class="container">
 
             </div>    
         </mat-tab>

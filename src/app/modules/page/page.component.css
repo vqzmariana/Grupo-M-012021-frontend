@@ -2,23 +2,23 @@
     margin-bottom: 48px;
 }
 
-.profile-container, .metrics-container, .subscribe-container{
+.container{
     margin-top: 30px;
     margin-left: 1em;
 }
 
-.personal-data-content{
+.content{
     padding-left: 20px;
 }
 
-.api-key, .email, .name{
+.data{
     display:flex;
     align-items: center;
     padding-bottom: 15px;
     padding-top: 15px;
 }
 
-.apikey-input, .hide-button, .email-label, .name-label{
+.apikey-input, .hide-button, .email-label, .name-label, .total{
     margin-left: 15px;
 }
 
