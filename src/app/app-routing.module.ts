@@ -13,7 +13,7 @@ const routes: Routes = [
     {
       path: 'page',
       pathMatch: 'prefix',
-      //canActivate: [AuthGuard],
+      canActivate: [AuthGuard],
       loadChildren: () =>
       import('./modules/page/page.module').then(m => m.PageModule)
     },

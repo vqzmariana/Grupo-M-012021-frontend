@@ -1,15 +1,15 @@
 <div class="page">
     <page-header></page-header>
     <mat-tab-group animationDuration="500ms" mat-align-tabs="start">
-        <mat-tab label="Profile"> 
+        <mat-tab label="Profile" i18n-label> 
             <div class="container">
-                <h1>Personal Data</h1>
+                <h1 i18n>Personal Data</h1>
                   
                 <div class="content">
                     <div class="data">
                         <h3>Api Key:</h3>
                         <input matInput [type]="hide ? 'password' : 'text'" disabled value="{{apikey}}" class="apikey-input">
-                        <button mat-raised-button (click)="hide = !hide" class="hide-button">Hide</button>
+                        <button mat-raised-button (click)="hide = !hide" class="hide-button" i18n>Hide</button>
                     </div>
                     <mat-divider></mat-divider>
                     <div class="data">
@@ -18,66 +18,66 @@
                     </div>
                     <mat-divider></mat-divider>
                     <div class="data">
-                        <h3>Name:</h3>
+                        <h3 i18n>Name:</h3>
                         <label class="name-label">{{name}}</label>
                     </div>
                 </div>
             </div>
         </mat-tab>
-        <mat-tab label="Metrics"> 
+        <mat-tab label="Metrics" i18n-label> 
             <div class="container">
-                <h1>Metrics</h1>
+                <h1 i18n>Metrics</h1>
 
                 <div class="content">
                     <div class="data">
-                        <h3>Total Reviews:</h3>
+                        <h3 i18n>Total Reviews:</h3>
                         <label class="total">{{metrics.reviews}}</label>
                     </div>
                     <mat-divider></mat-divider>
                     <div class="data">
-                        <h3>Total Likes:</h3>
+                        <h3 i18n>Total Likes:</h3>
                         <label class="total">{{metrics.likes}}</label>
                     </div>
                     <mat-divider></mat-divider>
                     <div class="data">
-                        <h3>Total Dislikes:</h3>
+                        <h3 i18n>Total Dislikes:</h3>
                         <label class="total">{{metrics.dislikes}}</label>
                     </div>
                     <mat-divider></mat-divider>
                     <div class="data">
-                        <h3>Total Reports:</h3>
+                        <h3 i18n>Total Reports:</h3>
                         <label class="total">{{metrics.reports}}</label>
                     </div>
                 </div>
                 
             </div> 
         </mat-tab>
-        <mat-tab label="Subscribe"> 
+        <mat-tab label="Subscribe" i18n-label> 
             <div class="container">
                 <div class="content">
                     <div class="data">
-                        <h3>Subscribe:</h3>
+                        <h3 i18n>Subscribe:</h3>
                         <form [formGroup]="form" (ngSubmit)="subscribe()">
                             <mat-form-field class="full-width-input">
-                                <mat-label>TitleId</mat-label>
+                                <mat-label>Id</mat-label>
                                 <input matInput type="text" formControlName="title" required>
-                                <mat-error>
-                                    Please provide a TitleId
+                                <mat-error i18n>
+                                    Please provide an Id
                                 </mat-error>
                             </mat-form-field>
                             <mat-form-field class="full-width-input">
                                 <mat-label>Url</mat-label>
                                 <input matInput type="url" formControlName="url" required>
-                                <mat-error>
+                                <mat-error i18n>
                                     Please enter valid url.
                                 </mat-error>
                             </mat-form-field>
-                            <button mat-raised-button class="subscribe-button">Subscribe</button>
+                            <button mat-raised-button class="subscribe-button" i18n>Subscribe</button>
                             <mat-spinner [diameter]="25" *ngIf="showSpinner"></mat-spinner>
                             <mat-icon *ngIf="!formInvalid && formSubmit" class="done">done</mat-icon>
                             <mat-icon *ngIf="formInvalid" class="error">error_outline</mat-icon>
-                            <mat-error *ngIf="formInvalid" class="form-error">
-                                The title id doesn't exist
+                            <mat-error *ngIf="formInvalid" class="form-error" i18n>
+                                The Id doesn't exist
                             </mat-error>
                         </form>
                     </div>
