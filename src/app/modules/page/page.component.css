@@ -29,6 +29,7 @@ h3{
 .apikey-input{
     height: 25px;
     font-size: 15px;
+    width: auto;
 }
 
 .hide-button{

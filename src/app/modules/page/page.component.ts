@@ -21,7 +21,7 @@ export class PageComponent implements OnInit {
 
   ngOnInit(): void {
     const token = localStorage.getItem('token')
-    const fullpath = this.API_URL + "client/metrics"
+    const fullpath = this.API_URL + `client/metrics?email=${this.email}`
     this.http.get(fullpath, {headers: new HttpHeaders().set('Authorization', token)}).subscribe({
       next: data => {
         this.metrics = data as Metrics
