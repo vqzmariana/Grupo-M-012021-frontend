@@ -18,7 +18,13 @@
     padding-top: 15px;
 }
 
-.apikey-input, .hide-button, .email-label, .name-label, .total{
+form{
+    display: flex;
+    align-items: center;
+
+}
+
+.apikey-input, button, .email-label, .name-label, .total, .mat-form-field, mat-spinner{
     margin-left: 15px;
 }
 
@@ -32,11 +38,28 @@ h3{
     width: auto;
 }
 
-.hide-button{
+button{
     background: deepskyblue;
     color: white;
+    min-width: auto;
 }
 
-input:disabled{
+.apikey-input:disabled{
     color: black;
+}
+
+.done{
+    margin-left: 15px;
+    color: green;
+}
+
+.error{
+    margin-left: 15px;
+    color: red;
+}
+
+.form-error{
+    margin-left: 5px;
+    margin-right: 10px;
+    min-width: max-content;
 }

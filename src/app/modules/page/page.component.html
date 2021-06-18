@@ -54,7 +54,34 @@
         </mat-tab>
         <mat-tab label="Subscribe"> 
             <div class="container">
-
+                <div class="content">
+                    <div class="data">
+                        <h3>Subscribe:</h3>
+                        <form [formGroup]="form" (ngSubmit)="subscribe()">
+                            <mat-form-field class="full-width-input">
+                                <mat-label>TitleId</mat-label>
+                                <input matInput type="text" formControlName="title" required>
+                                <mat-error>
+                                    Please provide a TitleId
+                                </mat-error>
+                            </mat-form-field>
+                            <mat-form-field class="full-width-input">
+                                <mat-label>Url</mat-label>
+                                <input matInput type="url" formControlName="url" required>
+                                <mat-error>
+                                    Please enter valid url.
+                                </mat-error>
+                            </mat-form-field>
+                            <button mat-raised-button class="subscribe-button">Subscribe</button>
+                            <mat-spinner [diameter]="25" *ngIf="showSpinner"></mat-spinner>
+                            <mat-icon *ngIf="!formInvalid && formSubmit" class="done">done</mat-icon>
+                            <mat-icon *ngIf="formInvalid" class="error">error_outline</mat-icon>
+                            <mat-error *ngIf="formInvalid" class="form-error">
+                                The title id doesn't exist
+                            </mat-error>
+                        </form>
+                    </div>
+                </div>
             </div>    
         </mat-tab>
     </mat-tab-group>
