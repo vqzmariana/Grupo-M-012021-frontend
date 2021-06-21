@@ -49,11 +49,11 @@ export class PageComponent implements OnInit {
     if (this.form.valid) {
       
       this.showSpinner = true
-      const fullpath = this.API_URL + 'title/subscribe'
-      const titleid = this.form.get('title')?.value;
+      const fullpath = this.API_URL + 'client/subscribe'
+      const titleId = this.form.get('title')?.value;
       const url = this.form.get('url')?.value;
       const token = localStorage.getItem('token')
-      this.http.post(fullpath, {email: this.email, titleid, url}, {headers: new HttpHeaders().set('Authorization', token)}).subscribe({
+      this.http.post(fullpath, {email: this.email, titleId, url}, {headers: new HttpHeaders().set('Authorization', token)}).subscribe({
         next: data => {
           this.showSpinner = false
           this.formSubmit = true
