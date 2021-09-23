@@ -1,0 +1,345 @@
+{
+	"info": {
+		"_postman_id": "341a3901-56d5-4b40-89c2-d31b0befd4b1",
+		"name": "Reviews",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "heroku",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "ApiKey1234",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "ApiKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "ApiKey",
+						"value": "ApiKey1234",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://grupo-m-desapp.herokuapp.com/swagger-ui.html",
+					"protocol": "https",
+					"host": [
+						"grupo-m-desapp",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"swagger-ui.html"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getReviews",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "ApiKey1234",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "ApiKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "ApiKey",
+						"value": "ApiKey1234",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{env.local}}/review?platform=Netflix",
+					"protocol": "http",
+					"host": [
+						"{{env.local}}"
+					],
+					"path": [
+						"review"
+					],
+					"query": [
+						{
+							"key": "numPage",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "rating",
+							"value": "4.5",
+							"disabled": true
+						},
+						{
+							"key": "reviewType",
+							"value": "PremiumReview",
+							"disabled": true
+						},
+						{
+							"key": "platform",
+							"value": "Netflix"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getReviews heroku",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "ApiKey1234",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "ApiKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "ApiKey",
+						"value": "ApiKey1234",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://grupo-m-desapp.herokuapp.com/review?platform=Netflix",
+					"protocol": "https",
+					"host": [
+						"grupo-m-desapp",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"review"
+					],
+					"query": [
+						{
+							"key": "numPage",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "rating",
+							"value": "4.5",
+							"disabled": true
+						},
+						{
+							"key": "reviewType",
+							"value": "PremiumReview",
+							"disabled": true
+						},
+						{
+							"key": "platform",
+							"value": "Netflix"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addReport",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "ApiKey1234",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "ApiKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"reason\": \"me ofende y encima spoilea\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{env.local}}/review/1/reports",
+					"protocol": "http",
+					"host": [
+						"{{env.local}}"
+					],
+					"path": [
+						"review",
+						"1",
+						"reports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addReport heroku",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "ApiKey1234",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "ApiKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"reason\": \"me ofende y encima spoilea\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://grupo-m-desapp.herokuapp.com/review/1/reports",
+					"protocol": "https",
+					"host": [
+						"grupo-m-desapp",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"review",
+						"1",
+						"reports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getReports",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "ApiKey1234",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "ApiKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{env.local}}/review/1/reports",
+					"protocol": "http",
+					"host": [
+						"{{env.local}}"
+					],
+					"path": [
+						"review",
+						"1",
+						"reports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getReports heroku",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "ApiKey1234",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "ApiKey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://grupo-m-desapp.herokuapp.com/review/1/reports",
+					"protocol": "https",
+					"host": [
+						"grupo-m-desapp",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"review",
+						"1",
+						"reports"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "env_heroku",
+			"value": "grupo-m-desapp.herokuapp.com"
+		},
+		{
+			"key": "env.local",
+			"value": "localhost:8080"
+		}
+	]
+}
